@@ -578,3 +578,51 @@ gap: 50px;
     opacity:0;
     visibility:hidden;
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .left{
+        order: 2;
+    }
+
+    .right{
+        order: 1;
+    }
+
+    .circle img{
+        width: 250px;
+        height: 250px;
+    }
+
+    h1{
+        font-size: 42px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .nav-links{
+        gap: 15px;
+        font-size: 14px;
+    }
+}
