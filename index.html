@@ -1,52 +1,61 @@
-
-    <meta name="viewport"   <!DOCTYPE html>
+   <!DOCTYPE html>
+    <meta name="viewport"  
   <html lang="en">
   <head>
     <meta charset="UTF-8">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                
+
                 <link rel="stylesheet"href=style.css>
     <title>portfolio</title>
   </head>
   <!-- nav-section -->
   <body>
+    
+    <div id="loader">
+    <div class="spinner"></div>
+    <h2>Loading Portfolio...</h2>
+</div>
+    <div id="progress-bar"></div>
     <div class="navbar">
+      <button id="theme-toggle">
+        
+      </button>
       <div class="logo">
         <span class="sk">SK</span>
         <span class="name">satyam.</span>
       </div>
       <ul class="nav-links">
-        <li><a  href="#" class="active">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">projects</a></li>
-        <li ><a  href="#">Resume</a></li>
-        <li ><a  href="#">contact</a></li>
+        <li><a  href="#about" class="active">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li ><a href="#Resume">Resume</a></li>
+        <li ><a  href="#contact">contact</a></li>
       </ul>
     </div>
       <!-- hero-section -->
-    <section class="hero">
+    <section class="hero hidden" id="home" >
 <div class="hero-content">
   <div class="left">
     <span class="tag">&#128075;Hi I'm</span>
     <h1>Satyam Kumar<br><span>Mishra</span></h1>
+    <h2>I am <span id="typing"></span></h2>
     <h2>Web Developer</h2>
     <p>I build responsive and user friendly websites.<br>
       currently learning backend dvelopment with python,<br>
       and real world projects.
     </p>
     <div class="buttons">
-      <a href="#" class="btn download">
+      <a href="My resume.pdf" class="btn download">
         Download Resume
       </a>
-      <a href="#" class="btn hire">
+      <a href="https://www.linkedin.com/in/satyam-kumar-mishra-b38315347" class="btn hire">
         Hire me
       </a>
     </div>
     
-      <div class="social-icons">
-        <i class="fab fa-github"></i>
-         <i class="fab fa-linkedin"></i>
-          <i class="fab fa-twitter"></i>
-      </div>
+      
     </div>
     <div class="right">
       <div class="circle">
@@ -55,7 +64,7 @@
     </div>
 </div>
     </section>
-    <section class="about" id="abbout">
+    <section class="about hidden" id="about">
       <div class="about-left">
       <h2><i class="fa-solid fa-user"></i> About Me</h2>
               <p>
@@ -101,7 +110,7 @@
 
       </div>
     </section>
-    <section class=" skills" id="skills">
+    <section class=" skills hidden" id="skills" >
       <div class="container">
         <h2> My skills</h2>
         <p class="subtitle">Technologies and tolls I work with</p>
@@ -128,7 +137,7 @@
         </div>
       </div>
     </section>
-    <section class="projects" id="projects">
+    <section class="projects hidden" id="projects">
       <h2 class="section-title">My <span> projects</span></h2>
       <div class="project-container">
         <div class="project-card">
@@ -142,7 +151,7 @@
             <span>HTML</span>
             <span>CSS</span>
           </div>
-          <a href="#" class="project-btn"> view project</a>
+          <a href="https://github.com/mishrasatyamk999-stack/Amazon-clone.git" class="project-btn"> view project</a>
         </div>
         <div class="project-card">
           <h3>Meesho-clone</h3>
@@ -153,53 +162,63 @@
           <span>HTML</span>
           <span>CSS</span>
           </div>
-          <a href="#" class="project-btn"> view project</a>
+          <a href="https://github.com/mishrasatyamk999-stack/meesho_clone.git" class="project-btn"> view project</a>
           </div>
         
       </div>
     </section>
     <!-- resume section -->
-     <section id="resume" class="resume" >
+     <section id="resume" class="resume hidden"  >
       <div class="resume">
         <h2>Resume</h2>
         <p>My resume contains skills, projects eduacation and internship experience</p>
-        <a href="#"download class=" btn">
+        <a href="My resume.pdf"download class=" btn">
            download resume</a>
 
       </div>
      </section>
      <!-- contact-section -->
+      <section class="contact-section hidden" id="contact">
 
-     <section class="contact-scetion" id="contact">
-      <div class="contact-container">
+    <div class="contact-container">
+
         <h2>Contact Me</h2>
+
         <p>
-          Have a project idea or internship opprotunity? Feel free 
-          to rech out
+            Have a project idea or internship opportunity?
+            Feel free to reach out.
         </p>
+
         <div class="contact-info">
-          <a href="mailto:mishrasatyamk999@gmail.com">
-            mishrasatyamk999@gmail.com
-          </a>
-          <a href="#">
-            Linkedin
-          </a>
-           <a href="#">
-          Github
-          </a>
+            <a href="mailto:mishrasatyamk999@gmail.com">
+                mishrasatyamk999@gmail.com
+            </a>
+
+            <a href="https://www.linkedin.com/in/satyam-kumar-mishra-b38315347" target="_blank">LinkedIn</a>
+
+            <a href="https://github.com/mishrasatyamk999-stack" target="_blank">GitHub</a>
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Your name"required>
-           <input type="email" placeholder="Your mail"required>
-        
-        <textarea
-        rows="5"
-        placeholder="Your Message"
-        Required></textarea>
-        <button type="submit">Send Message</button>
-      </div>
-     </section>
+
+        <form id="contact-form" class="contact-form">
+
+            <input type="text" name="from_name" placeholder="Your Name" required>
+
+            <input type="email" name="from_email" placeholder="Your Email" required>
+
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</section>
+
      </form>
+     <button id="topBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+     </button>
   </body>
   <script src="script.js"></script>
   </html>
