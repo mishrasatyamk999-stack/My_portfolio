@@ -1,9 +1,109 @@
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        padding:15px;
+        gap:15px;
+    }
+
+    .nav-links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:40px;
+    }
+
+    .left{
+        width:100%;
+    }
+
+    .right{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .circle img{
+        width:280px;
+        height:280px;
+    }
+
+    .left h1{
+        font-size:45px;
+    }
+
+    .left h2{
+        font-size:28px;
+    }
+
+    .left p{
+        font-size:16px;
+    }
+
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    .btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+        margin-top:25px;
+    }
+
+    /* ===== About Section ===== */
+
+    .about{
+        flex-direction:column;
+        padding:60px 20px;
+        gap:30px;
+    }
+
+    .about-left,
+    .about-right{
+        width:100%;
+        min-width:100%;
+    }
+
+    .about-left{
+        text-align:center;
+    }
+
+    .about-right{
+        padding:25px;
+    }
+
+    .info{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial;
 }
+
 body{
     color: white;
     background: #0d1117
@@ -577,52 +677,4 @@ gap: 50px;
 .loader-hidden{
     opacity:0;
     visibility:hidden;
-}
-/* Mobile Responsive */
-@media (max-width: 768px) {
-
-    .hero-content{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 20px;
-    }
-
-    .left{
-        order: 2;
-    }
-
-    .right{
-        order: 1;
-    }
-
-    .circle img{
-        width: 250px;
-        height: 250px;
-    }
-
-    h1{
-        font-size: 42px;
-    }
-
-    h2{
-        font-size: 28px;
-    }
-
-    .buttons{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .navbar{
-        padding: 15px 20px;
-    }
-
-    .nav-links{
-        gap: 15px;
-        font-size: 14px;
-    }
 }
